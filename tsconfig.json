@@ -1,16 +1,17 @@
 {
     "compilerOptions": {
-        "outDir": "./dist/",
+        "outDir": "./dist",
         "sourceMap": true,
         "noImplicitAny": true,
-        "module": "es6",
-        "target": "es2016",
+        "module": "esnext",
+        "target": "esnext",
         "jsx": "react",
         "allowJs": true
     },
 
     "files": [
         "./node_modules/@types/node/index.d.ts",
-        "./node_modules/@types/googlemaps/index.d.ts"
+        "./node_modules/@types/googlemaps/index.d.ts",
+        "./node_modules/@types/express/index.d.ts"
     ],
 }
