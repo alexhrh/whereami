@@ -3,10 +3,11 @@ import renderPlaces from './renderPlaces';
 
 const getElement = id => document.getElementById(id);
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener('DOMContentLoaded', () => {
 
-    document.getElementById("search").addEventListener("click", () => {
+    getElement("search").addEventListener('click', () => {
 
+        // @ts-ignore
         getPlaces(getElement('location').value)
             .then(places => renderPlaces(places, getElement('result')))
             .catch(console.log);

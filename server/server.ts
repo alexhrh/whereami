@@ -1,9 +1,8 @@
 'use strict';
-
 import * as express from 'express';
-import * as bodyParser from 'body-parser'
+import * as bodyParser from 'body-parser';
 
-import placesNearby from './placesNearby';
+import googleMaps from './googleMaps';
 
 const app = express();
 
@@ -13,7 +12,10 @@ app.use(express.static('client'));
 app.use(bodyParser.json());
 
 app.post('/findplaces', (req, res) => {
-    placesNearby(req.body.location)
+    googleMaps.placesNearby({
+        location: req.body.location,
+        rankby: 'distance'
+    })
         .then(places => res.send(places))
         .catch(console.log);
 });
