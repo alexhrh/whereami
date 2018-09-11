@@ -1,6 +1,5 @@
 .idea
 node_modules
-*.js
 *.js.map
 typings
 dist
@@ -8,5 +7,5 @@ coverage
 ts-out
 npm-debug.log
 debug.log
-clientDist
-serverDist
+client-dist
+server-dist

@@ -3,7 +3,7 @@
         "outDir": "./dist/",
         "sourceMap": true,
         "noImplicitAny": false,
-        "module": "commonjs",
+        "module": "esnext",
         "target": "es5",
         "allowJs": true
     },
@@ -11,6 +11,6 @@
     "files": [
         "./node_modules/@types/node/index.d.ts",
         "./node_modules/@types/express/index.d.ts",
-        "./node_modules/@types/node-fetch/index.d.ts"
+        "./node_modules/@types/node-fetch/index.d.ts",
     ],
 }

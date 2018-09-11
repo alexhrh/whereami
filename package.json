@@ -5,7 +5,10 @@
     "private": true,
     "scripts": {
         "build.client": "webpack --config webpack.config.client.js",
-        "build.server": "webpack --config webpack.config.server.js"
+        "build.server": "webpack --config webpack.config.server.js",
+        "build": "npm run build.server && npm run build.client",
+        "clear": "",
+        "start": "npm run build && node server-dist/main.bundle.js"
     },
     "keywords": [],
     "author": "",
