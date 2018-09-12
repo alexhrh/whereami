@@ -51,5 +51,6 @@ module.exports = {
 
     devtool: 'cheap-module-source-map',
 
-    target: 'node'
+    target: 'node',
+    mode: 'none',
 };

@@ -9,7 +9,7 @@ module.exports = {
     context: ROOT,
 
     entry: {
-        'main': 'index.ts'
+        'main': 'src/index.ts'
     },
     
     output: {
@@ -54,5 +54,5 @@ module.exports = {
     },
 
     devtool: 'cheap-module-source-map',
-    devServer: {}
+    mode: 'none'
 };

@@ -1,4 +1,4 @@
-class Observer {
+export default class Observer {
     private events: object;
 
     constructor () {
@@ -18,5 +18,3 @@ class Observer {
         }
     }
 }
-
-export default Observer;

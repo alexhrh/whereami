@@ -2,15 +2,19 @@
     "compilerOptions": {
         "outDir": "./dist/",
         "sourceMap": true,
-        "noImplicitAny": false,
         "module": "esnext",
-        "target": "es5",
-        "allowJs": true
+        "target": "es6",
+        "allowJs": true,
+        "lib": [
+            "es2017",
+            "dom",
+            "dom.iterable"
+        ],
     },
 
     "files": [
         "./node_modules/@types/node/index.d.ts",
         "./node_modules/@types/express/index.d.ts",
-        "./node_modules/@types/node-fetch/index.d.ts",
+        "./node_modules/@types/node-fetch/index.d.ts"
     ],
 }
