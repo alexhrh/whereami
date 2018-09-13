@@ -15,12 +15,14 @@ export default class PlaceListView {
         if (!this.rendered) {
             this.table = document.createElement('table');
             this.table.innerHTML = `
-                <tbody>
+                <thead>
                     <tr>
                         <th>Name</th>
                         <th>Position</th>
                         <th>Distance</th>
                     </tr>
+                </thead>
+                <tbody>
                 </tbody>`;
 
             this.tbody = this.table.querySelector('tbody');

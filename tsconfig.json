@@ -8,13 +8,15 @@
         "lib": [
             "es2017",
             "dom",
-            "dom.iterable"
+            "dom.iterable",
+            "es2015.iterable"
         ],
     },
 
     "files": [
         "./node_modules/@types/node/index.d.ts",
         "./node_modules/@types/express/index.d.ts",
-        "./node_modules/@types/node-fetch/index.d.ts"
+        "./node_modules/@types/node-fetch/index.d.ts",
+        "./node_modules/@types/lodash/index.d.ts"
     ],
 }

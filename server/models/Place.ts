@@ -10,10 +10,13 @@ class Place {
     location: Location;
     distance: number;
 
-    constructor(place, params) {
+    constructor(place) {
         this.name = place.name;
         this.location = place.geometry.location;
-        this.distance = GeoCoords.distanceOnEarth(this.location, params.location);
+    }
+
+    setDistance(location) {
+        this.distance = GeoCoords.distanceOnEarth(this.location, location);
     }
 }
 

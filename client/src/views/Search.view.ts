@@ -19,12 +19,6 @@ export default class SearchView extends Observer {
                 <input type="text">
             </div>
             <div>
-                How far to look? (in meters)
-            </div>
-            <div>
-                <input type="text">
-            </div>
-            <div>
                 Where are you?
             </div>
             <div>
@@ -34,8 +28,18 @@ export default class SearchView extends Observer {
             <button>Search</button>
             `;
 
-        const [query, radius, location] = div.querySelectorAll('input');
+        const [keyword, location] = div.querySelectorAll('input');
         const [getPos, search] = div.querySelectorAll('button');
+
+        const getSearchParams = () => {
+            const params = {
+                location: location.value
+            };
+            if (keyword.value !== '') {
+                params['keyword'] = keyword.value;
+            }
+            return params;
+        };
 
         getPos.addEventListener('click', () => {
             BrowserTools.getCurrentPosition()
@@ -55,13 +59,5 @@ export default class SearchView extends Observer {
 
         this.parrentElem.innerHTML = '';
         this.parrentElem.appendChild(div);
-
-        function getSearchParams() {
-            return ({
-                query: query.value,
-                radius: radius.value,
-                location: location.value
-            });
-        }
     }
 }

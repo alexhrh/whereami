@@ -12,9 +12,16 @@ async function makeRequest(url) {
     return await rawResponse.json();
 }
 
+function timeout(ms) {
+    return new Promise((resolve) => {
+        setTimeout(resolve, ms);
+    });
+}
+
 const ApiRequest = {
     formatUrl,
-    makeRequest
+    makeRequest,
+    timeout
 };
 
 export default ApiRequest;
